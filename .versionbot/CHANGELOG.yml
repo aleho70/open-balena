@@ -1,4 +1,18 @@
 - commits:
+    - subject: "chore(deps): update dependency haproxy to 2.6"
+      hash: d60f767f955b888c5bcc4b06191b23523d92a0ba
+      body: |
+        Update haproxy to 2.6
+
+        Update haproxy from 1.9 to 2.6
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Renovate Bot
+      nested: []
+  version: 3.8.0
+  date: 2022-07-18T16:55:20.814Z
+- commits:
     - subject: "patch: Update differences table with bC"
       hash: b6a01bed5aaa3b9d39574cf2a37060f65e82c8ad
       body: Added a line to the table with the differences between oB and bC about the
