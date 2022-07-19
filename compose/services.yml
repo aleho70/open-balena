@@ -153,6 +153,7 @@ services:
     ports:
       - "80:80"
       - "443:443"
+      - "10000-10009:10000-10009"
     expose:
       - "222"
       - "3128"
@@ -183,5 +184,5 @@ services:
       - cert-provider:/usr/src/app/certs
     environment:
       ACTIVE: ${OPENBALENA_ACME_CERT_ENABLED}
-      DOMAINS: "api.${OPENBALENA_HOST_NAME},registry.${OPENBALENA_HOST_NAME},s3.${OPENBALENA_HOST_NAME},vpn.${OPENBALENA_HOST_NAME},tunnel.${OPENBALENA_HOST_NAME}"
+      DOMAINS: "api.${OPENBALENA_HOST_NAME},registry.${OPENBALENA_HOST_NAME},s3.${OPENBALENA_HOST_NAME},vpn.${OPENBALENA_HOST_NAME},tunnel.${OPENBALENA_HOST_NAME},admin.${OPENBALENA_HOST_NAME},dashboard.${OPENBALENA_HOST_NAME},remote.${OPENBALENA_HOST_NAME},postgrest.${OPENBALENA_HOST_NAME}"
       OUTPUT_PEM: /certs/open-balena.pem
