@@ -153,7 +153,7 @@ services:
     ports:
       - "80:80"
       - "443:443"
-      - "10000-10009:10000-10009"
+      - "45.81.99.33:10000-10009:10000-10009"
     expose:
       - "222"
       - "3128"
@@ -169,6 +169,7 @@ services:
           - s3.${OPENBALENA_HOST_NAME}
           - redis.${OPENBALENA_HOST_NAME}
           - tunnel.${OPENBALENA_HOST_NAME}
+        
     environment:
       BALENA_HAPROXY_CRT: ${OPENBALENA_ROOT_CRT}
       BALENA_HAPROXY_KEY: ${OPENBALENA_ROOT_KEY}
