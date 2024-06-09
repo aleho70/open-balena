@@ -217,6 +217,8 @@ services:
       - "443:443/tcp"
       # haproxy/stats
       - "1936:1936/tcp"
+      # haproxy/remote
+      - "10000-10009:10000-10009"
     environment:
       LOGLEVEL: info
 
@@ -230,7 +232,7 @@ services:
     environment:
       DOCKER_HOST: unix:///host/run/docker.sock
       # resolved internally as {{service}}.{{dns-tld-without-balena-device-uuid}} to haproxy service
-      ALIASES: api,ca,cloudlink,db,delta,logs,redis,registry2,s3,stats,tunnel
+      ALIASES: api,ca,cloudlink,db,delta,logs,redis,registry2,s3,stats,tunnel,admin,dashboard,postgrest,remote
     labels:
       io.balena.features.balena-socket: 1
       io.balena.features.supervisor-api	: 1
